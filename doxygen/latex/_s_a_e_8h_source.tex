@@ -1,0 +1,99 @@
+\doxysection{SAE.\+h}
+\hypertarget{_s_a_e_8h_source}{}\label{_s_a_e_8h_source}\mbox{\hyperlink{_s_a_e_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Structure\ pour\ les\ étudiants}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_etudiant_a974e6acbcf55ad699cd0e0c623b8b3b5}{numero}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_etudiant_a9a1c9885ec8123185c57974f9849f86b}{stage\_ref}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_etudiant_aeda0d25a1c533ace75315684099566d8}{note\_finale}};}
+\DoxyCodeLine{00010\ \}\ \mbox{\hyperlink{struct_etudiant}{Etudiant}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Structure\ pour\ les\ stages}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stage_ab5fb16f4039b4b2d0b890dd025bb9926}{ref\_stage}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stage_a71713547e5714d6a27281c7ff15db816}{dept}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stage_a8ebbebeacb3f944c5c548185f0b98e61}{pourvu}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_stage_a7b6fbf42b1182b9ab1430754e92f3dc2}{nb\_candidatures}};}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{struct_stage}{Stage}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_ae72bba9e683d31179b4d5d8c31873875}{fChargementEtu}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{float}\ tNoteF[],\ \textcolor{keywordtype}{int}\ tmax);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_acdc814befe1eeecca53f3727632644fa}{fChargementStage}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCand[],\ \textcolor{keywordtype}{int}\ tCandEtu[][3],\ \textcolor{keywordtype}{int}\ tmax);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_af4c2c9cd54078ae9b892b4a906aa14ea}{attribuerNotes}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{char}\ mentions[][20],\ \textcolor{keywordtype}{int}\ tmax);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a6cfbfa1d0219352ac86890d0eeb11007}{afficherNotesParOrdreDecroissant}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{float}\ tNoteF[],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{char}\ mentions[][20]);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_ab3155f96ef4d3eec7961d926510e5644}{ajouter\_etudiant}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{float}\ tNoteF[],\ \textcolor{keywordtype}{int}\ *nb\_etudiants,\ \textcolor{keywordtype}{int}\ tmax);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_a8200f043d539773e5fa9d30a45919e87}{supprimerEtu}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{float}\ tNoteF[],\ \textcolor{keywordtype}{int}\ *nbEtu,\ \textcolor{keywordtype}{int}\ num);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00131\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_aea49aa9dd3e307fce1a0c6e86a9529c0}{ajouter\_stage}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCand[],\ \textcolor{keywordtype}{int}\ *nbStages,\ \textcolor{keywordtype}{int}\ tmax);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_a13003bc69e9fa64827a3127b69fb98cd}{supprimer\_stage}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCand[],\ \textcolor{keywordtype}{int}\ *nbStages,\ \textcolor{keywordtype}{int}\ refStage);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_a4f547d880100208465c1732fb2a6af0b}{candidater}}(\textcolor{keywordtype}{int}\ etuNum,\ \textcolor{keywordtype}{int}\ refStage,\ \textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tCand[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCandEtu[][3],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ nbStages);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a397ffd603f5064a787caabcebf556834}{affecter\_stage}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{int}\ tmax,\ \textcolor{keywordtype}{int}\ refStage,\ \textcolor{keywordtype}{int}\ numero);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00201\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_a_e_8h_a5c23c0a1b61108fd4b966d7a05007134}{fRechercher}}(\textcolor{keywordtype}{int}\ numero,\ \textcolor{keywordtype}{int}\ tableau[],\ \textcolor{keywordtype}{int}\ taille,\ \textcolor{keywordtype}{int}\ *trouve);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00214\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_ae461a30bb03a3a159ccff2fdbfd2d595}{rechercherStages}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00230\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a28f4511ea8f64e0003d8b3d30c990bc1}{afficherEleves}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{float}\ tNoteF[],\ \textcolor{keywordtype}{int}\ nbEtu,\ \textcolor{keywordtype}{int}\ num);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00243\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a167f41e396728c88714431761fe76089}{afficherCandidaturesEtudiant}}(\textcolor{keywordtype}{int}\ etuNum,\ \textcolor{keywordtype}{int}\ tCandEtu[][3],\ \textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00254\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a7a171d02127c795afa0e5de9ef5b6fa1}{afficherEtudiantsSansStage}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{int}\ nb\_etudiants);}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00268\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a37c403718065b466ada892c873f9ed78}{afficherStages}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCand[],\ \textcolor{keywordtype}{int}\ nbStages);}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00275\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_adf352f0a6445534b1440e09f9e841766}{afficherStagesDisponibles}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00288\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a9a04c2aa7fe93369d0b35f4c1f5ef5f3}{afficherStagesParDepartement}}(\textcolor{keywordtype}{int}\ numDept,\ \textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00302\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a7a0d64f1d1af4183d0d36c8d25b55553}{afficherStagesPourvus}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ nb\_stages,\ \textcolor{keywordtype}{int}\ nb\_etudiants);}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00314\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a8d91efb87d9be63d54353f198a065399}{afficherStagesNonPourvus}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00326\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a55eab5866c4a24dde3800328fb44e5ff}{afficherStagesNonPourvusResp}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00339\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_aba247fd45ee443765cb0bf09c5faa42f}{afficherInfoStage}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00352\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a33ed0acffddacb3069a6c30e9563d2cc}{sauvegarder\_etudiants}}(\mbox{\hyperlink{struct_etudiant}{Etudiant}}\ etudiants[],\ \textcolor{keywordtype}{int}\ nb\_etudiants);}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00363\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a94fade4d608a10fb3eef0a39debaa9c6}{sauvegarder\_stages}}(\mbox{\hyperlink{struct_stage}{Stage}}\ stages[],\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00381\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_ab1f02b4520f65b14764c0a2939070a13}{menu\_jury}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{float}\ tNoteF[],\ \textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{int}\ nb\_stages,\ \textcolor{keywordtype}{char}\ mentions[][20],\ \textcolor{keywordtype}{int}\ tmax);}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00400\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a23e17d21f9a63f2ec72edc228c0041d7}{menu\_etudiant}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{float}\ tNoteF[],\ \textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCand[],\ \textcolor{keywordtype}{int}\ tCandEtu[][3],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00416\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_a03ee8f45157dceb26b56276c226e552a}{suite\_etudiant}}(\textcolor{keywordtype}{int}\ numero,\ \textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCandEtu[][3],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00434\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_ad4af7a281ca0d4f62d59ae21897687f7}{menu\_responsable}}(\textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCand[],\ \textcolor{keywordtype}{int}\ *nbStages,\ \textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{int}\ tmax,\ \textcolor{keywordtype}{int}\ tCandEtu[][3]);}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00450\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_ae3337d213d948f3afe316254999df975}{suite\_responsable}}(\textcolor{keywordtype}{int}\ tEtu[],\ \textcolor{keywordtype}{int}\ tStage[],\ \textcolor{keywordtype}{int}\ tRef[],\ \textcolor{keywordtype}{int}\ tDept[],\ \textcolor{keywordtype}{int}\ tPourvu[],\ \textcolor{keywordtype}{int}\ tCandEtu[][3],\ \textcolor{keywordtype}{int}\ nb\_etudiants,\ \textcolor{keywordtype}{int}\ nb\_stages);}
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00457\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_s_a_e_8h_aae025fd63cea62c1a1bdcf7c0e86e58f}{menu\_principal}}(\textcolor{keywordtype}{void});}
+
+\end{DoxyCode}

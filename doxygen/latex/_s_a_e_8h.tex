@@ -1,0 +1,1389 @@
+\doxysection{SAE.\+h File Reference}
+\hypertarget{_s_a_e_8h}{}\label{_s_a_e_8h}\index{SAE.h@{SAE.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_etudiant}{Etudiant}}
+\item 
+struct \mbox{\hyperlink{struct_stage}{Stage}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_s_a_e_8h_ae72bba9e683d31179b4d5d8c31873875}{f\+Chargement\+Etu}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, float t\+NoteF\mbox{[}$\,$\mbox{]}, int tmax)
+\begin{DoxyCompactList}\small\item\em Charge les informations des étudiants depuis un fichier. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_a_e_8h_acdc814befe1eeecca53f3727632644fa}{f\+Chargement\+Stage}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\mbox{[}$\,$\mbox{]}, int t\+Cand\+Etu\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, int tmax)
+\begin{DoxyCompactList}\small\item\em Charge les informations des stages depuis un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_af4c2c9cd54078ae9b892b4a906aa14ea}{attribuer\+Notes}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, int nb\+\_\+etudiants, char mentions\mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]}, int tmax)
+\begin{DoxyCompactList}\small\item\em Attribue des mentions aux étudiants en fonction de leurs notes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a6cfbfa1d0219352ac86890d0eeb11007}{afficher\+Notes\+Par\+Ordre\+Decroissant}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, float t\+NoteF\mbox{[}$\,$\mbox{]}, int nb\+\_\+etudiants, char mentions\mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em Affiche les notes des étudiants par ordre décroissant. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_a_e_8h_ab3155f96ef4d3eec7961d926510e5644}{ajouter\+\_\+etudiant}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, float t\+NoteF\mbox{[}$\,$\mbox{]}, int \texorpdfstring{$\ast$}{*}nb\+\_\+etudiants, int tmax)
+\begin{DoxyCompactList}\small\item\em Ajoute un étudiant dans les tableaux correspondants. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_a_e_8h_a8200f043d539773e5fa9d30a45919e87}{supprimer\+Etu}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, float t\+NoteF\mbox{[}$\,$\mbox{]}, int \texorpdfstring{$\ast$}{*}nb\+Etu, int num)
+\begin{DoxyCompactList}\small\item\em Supprime un étudiant des tableaux correspondants. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_a_e_8h_aea49aa9dd3e307fce1a0c6e86a9529c0}{ajouter\+\_\+stage}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\mbox{[}$\,$\mbox{]}, int \texorpdfstring{$\ast$}{*}nb\+Stages, int tmax)
+\begin{DoxyCompactList}\small\item\em Ajoute un stage dans les tableaux correspondants. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_a_e_8h_a13003bc69e9fa64827a3127b69fb98cd}{supprimer\+\_\+stage}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\mbox{[}$\,$\mbox{]}, int \texorpdfstring{$\ast$}{*}nb\+Stages, int ref\+Stage)
+\begin{DoxyCompactList}\small\item\em Supprime un stage des tableaux correspondants. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_a_e_8h_a4f547d880100208465c1732fb2a6af0b}{candidater}} (int etu\+Num, int ref\+Stage, int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Cand\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\+Etu\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int nb\+Stages)
+\begin{DoxyCompactList}\small\item\em Permet à un étudiant de candidater à un stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a397ffd603f5064a787caabcebf556834}{affecter\+\_\+stage}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, int nb\+\_\+etudiants, int tmax, int ref\+Stage, int numero)
+\begin{DoxyCompactList}\small\item\em Affecte un stage à un étudiant. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_a_e_8h_a5c23c0a1b61108fd4b966d7a05007134}{f\+Rechercher}} (int numero, int tableau\mbox{[}$\,$\mbox{]}, int taille, int \texorpdfstring{$\ast$}{*}trouve)
+\begin{DoxyCompactList}\small\item\em Recherche un élément dans un tableau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_ae461a30bb03a3a159ccff2fdbfd2d595}{rechercher\+Stages}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Permet de rechercher des stages selon un critère. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a28f4511ea8f64e0003d8b3d30c990bc1}{afficher\+Eleves}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, float t\+NoteF\mbox{[}$\,$\mbox{]}, int nb\+Etu, int num)
+\begin{DoxyCompactList}\small\item\em Affiche les informations d\textquotesingle{}un étudiant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a167f41e396728c88714431761fe76089}{afficher\+Candidatures\+Etudiant}} (int etu\+Num, int t\+Cand\+Etu\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Affiche les candidatures d\textquotesingle{}un étudiant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a7a171d02127c795afa0e5de9ef5b6fa1}{afficher\+Etudiants\+Sans\+Stage}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, int nb\+\_\+etudiants)
+\begin{DoxyCompactList}\small\item\em Affiche les étudiants sans stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a37c403718065b466ada892c873f9ed78}{afficher\+Stages}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\mbox{[}$\,$\mbox{]}, int nb\+Stages)
+\begin{DoxyCompactList}\small\item\em Affiche les stages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_adf352f0a6445534b1440e09f9e841766}{afficher\+Stages\+Disponibles}} (void)
+\begin{DoxyCompactList}\small\item\em Affiche les stages disponibles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a9a04c2aa7fe93369d0b35f4c1f5ef5f3}{afficher\+Stages\+Par\+Departement}} (int num\+Dept, int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Affiche les stages d\textquotesingle{}un département spécifique. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a7a0d64f1d1af4183d0d36c8d25b55553}{afficher\+Stages\+Pourvus}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages, int nb\+\_\+etudiants)
+\begin{DoxyCompactList}\small\item\em Affiche les stages pourvus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a8d91efb87d9be63d54353f198a065399}{afficher\+Stages\+Non\+Pourvus}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Affiche les stages non pourvus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a55eab5866c4a24dde3800328fb44e5ff}{afficher\+Stages\+Non\+Pourvus\+Resp}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Affiche les stages non pourvus pour un responsable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_aba247fd45ee443765cb0bf09c5faa42f}{afficher\+Info\+Stage}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Affiche les informations d\textquotesingle{}un stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a33ed0acffddacb3069a6c30e9563d2cc}{sauvegarder\+\_\+etudiants}} (\mbox{\hyperlink{struct_etudiant}{Etudiant}} etudiants\mbox{[}$\,$\mbox{]}, int nb\+\_\+etudiants)
+\begin{DoxyCompactList}\small\item\em Sauvegarde les informations des étudiants dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a94fade4d608a10fb3eef0a39debaa9c6}{sauvegarder\+\_\+stages}} (\mbox{\hyperlink{struct_stage}{Stage}} stages\mbox{[}$\,$\mbox{]}, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Sauvegarde les informations des stages dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_ab1f02b4520f65b14764c0a2939070a13}{menu\+\_\+jury}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, float t\+NoteF\mbox{[}$\,$\mbox{]}, int t\+Ref\mbox{[}$\,$\mbox{]}, int nb\+\_\+etudiants, int nb\+\_\+stages, char mentions\mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]}, int tmax)
+\begin{DoxyCompactList}\small\item\em Affiche le menu du jury. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a23e17d21f9a63f2ec72edc228c0041d7}{menu\+\_\+etudiant}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, float t\+NoteF\mbox{[}$\,$\mbox{]}, int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\mbox{[}$\,$\mbox{]}, int t\+Cand\+Etu\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, int nb\+\_\+etudiants, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Affiche le menu étudiant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_a03ee8f45157dceb26b56276c226e552a}{suite\+\_\+etudiant}} (int numero, int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\+Etu\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, int nb\+\_\+etudiants, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Permet à l\textquotesingle{}étudiant de gérer ses candidatures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_ad4af7a281ca0d4f62d59ae21897687f7}{menu\+\_\+responsable}} (int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\mbox{[}$\,$\mbox{]}, int \texorpdfstring{$\ast$}{*}nb\+Stages, int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, int nb\+\_\+etudiants, int tmax, int t\+Cand\+Etu\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Affiche le menu du responsable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_ae3337d213d948f3afe316254999df975}{suite\+\_\+responsable}} (int t\+Etu\mbox{[}$\,$\mbox{]}, int t\+Stage\mbox{[}$\,$\mbox{]}, int t\+Ref\mbox{[}$\,$\mbox{]}, int t\+Dept\mbox{[}$\,$\mbox{]}, int t\+Pourvu\mbox{[}$\,$\mbox{]}, int t\+Cand\+Etu\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, int nb\+\_\+etudiants, int nb\+\_\+stages)
+\begin{DoxyCompactList}\small\item\em Affiche la suite du menu responsable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_a_e_8h_aae025fd63cea62c1a1bdcf7c0e86e58f}{menu\+\_\+principal}} (void)
+\begin{DoxyCompactList}\small\item\em Affiche le menu principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_s_a_e_8h_a397ffd603f5064a787caabcebf556834}\index{SAE.h@{SAE.h}!affecter\_stage@{affecter\_stage}}
+\index{affecter\_stage@{affecter\_stage}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{affecter\_stage()}{affecter\_stage()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a397ffd603f5064a787caabcebf556834} 
+void affecter\+\_\+stage (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{int}]{tmax}{, }\item[{int}]{ref\+Stage}{, }\item[{int}]{numero}{}\end{DoxyParamCaption})}
+
+
+
+Affecte un stage à un étudiant. 
+
+Cette fonction affecte un stage à un étudiant en fonction de son numéro et de la référence du stage. Elle met à jour les tableaux des étudiants et des stages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+{\em ref\+Stage} & Référence du stage à affecter. \\
+\hline
+{\em numero} & Numéro de l\textquotesingle{}étudiant à affecter au stage.\\
+\hline
+\end{DoxyParams}
+Cette fonction permet d\textquotesingle{}affecter un stage à un étudiant en vérifiant que l\textquotesingle{}étudiant n\textquotesingle{}a pas déjà un stage. Si l\textquotesingle{}étudiant est éligible, la fonction met à jour le fichier des étudiants et des stages pour refléter cette affectation. Elle supprime également toutes les candidatures précédentes de l\textquotesingle{}étudiant pour ce stage et marque ce dernier comme pourvu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des références des stages. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants dans le tableau. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+{\em ref\+Stage} & Référence du stage à affecter. \\
+\hline
+{\em numero} & Numéro de l\textquotesingle{}étudiant à affecter au stage. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a167f41e396728c88714431761fe76089}\index{SAE.h@{SAE.h}!afficherCandidaturesEtudiant@{afficherCandidaturesEtudiant}}
+\index{afficherCandidaturesEtudiant@{afficherCandidaturesEtudiant}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherCandidaturesEtudiant()}{afficherCandidaturesEtudiant()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a167f41e396728c88714431761fe76089} 
+void afficher\+Candidatures\+Etudiant (\begin{DoxyParamCaption}\item[{int}]{etu\+Num}{, }\item[{int}]{t\+Cand\+Etu}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les candidatures d\textquotesingle{}un étudiant. 
+
+Cette fonction affiche les candidatures d\textquotesingle{}un étudiant donné en fonction de son numéro.
+
+
+\begin{DoxyParams}{Parameters}
+{\em etu\+Num} & Numéro de l\textquotesingle{}étudiant. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Affiche les candidatures d\textquotesingle{}un étudiant.
+
+Cette fonction affiche les stages auxquels un étudiant a candidaté ainsi que leur état (pourvu ou non). Elle affiche également le stage affecté si un stage a été pourvu à l\textquotesingle{}étudiant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em etu\+Num} & Numéro de l\textquotesingle{}étudiant. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants aux stages. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a28f4511ea8f64e0003d8b3d30c990bc1}\index{SAE.h@{SAE.h}!afficherEleves@{afficherEleves}}
+\index{afficherEleves@{afficherEleves}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherEleves()}{afficherEleves()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a28f4511ea8f64e0003d8b3d30c990bc1} 
+void afficher\+Eleves (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{t\+NoteF}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+Etu}{, }\item[{int}]{num}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les informations d\textquotesingle{}un étudiant. 
+
+Cette fonction affiche les informations d\textquotesingle{}un étudiant donné en utilisant ses numéros d\textquotesingle{}étudiant, son stage, et sa note finale.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+Etu} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em num} & Numéro de l\textquotesingle{}étudiant à afficher.\\
+\hline
+\end{DoxyParams}
+Affiche les informations d\textquotesingle{}un étudiant.
+
+Cette fonction affiche soit la liste complète des étudiants, soit les informations d\textquotesingle{}un étudiant particulier en fonction du numéro fourni. Si le numéro de l\textquotesingle{}étudiant est trouvé, ses informations sont affichées.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+Etu} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em num} & Numéro de l\textquotesingle{}étudiant à rechercher. Si égal à -\/1, affiche tous les étudiants. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a7a171d02127c795afa0e5de9ef5b6fa1}\index{SAE.h@{SAE.h}!afficherEtudiantsSansStage@{afficherEtudiantsSansStage}}
+\index{afficherEtudiantsSansStage@{afficherEtudiantsSansStage}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherEtudiantsSansStage()}{afficherEtudiantsSansStage()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a7a171d02127c795afa0e5de9ef5b6fa1} 
+void afficher\+Etudiants\+Sans\+Stage (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les étudiants sans stage. 
+
+Cette fonction affiche la liste des étudiants qui n\textquotesingle{}ont pas de stage attribué.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants.\\
+\hline
+\end{DoxyParams}
+Affiche les étudiants sans stage.
+
+Cette fonction affiche les étudiants qui n\textquotesingle{}ont pas encore de stage attribué.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_aba247fd45ee443765cb0bf09c5faa42f}\index{SAE.h@{SAE.h}!afficherInfoStage@{afficherInfoStage}}
+\index{afficherInfoStage@{afficherInfoStage}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherInfoStage()}{afficherInfoStage()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_aba247fd45ee443765cb0bf09c5faa42f} 
+void afficher\+Info\+Stage (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les informations d\textquotesingle{}un stage. 
+
+Cette fonction affiche les informations détaillées d\textquotesingle{}un stage, y compris la référence, le département et l\textquotesingle{}état de pourvu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Affiche les informations d\textquotesingle{}un stage.
+
+Cette fonction permet de rechercher et d\textquotesingle{}afficher les informations d\textquotesingle{}un stage basé sur sa référence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a6cfbfa1d0219352ac86890d0eeb11007}\index{SAE.h@{SAE.h}!afficherNotesParOrdreDecroissant@{afficherNotesParOrdreDecroissant}}
+\index{afficherNotesParOrdreDecroissant@{afficherNotesParOrdreDecroissant}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherNotesParOrdreDecroissant()}{afficherNotesParOrdreDecroissant()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a6cfbfa1d0219352ac86890d0eeb11007} 
+void afficher\+Notes\+Par\+Ordre\+Decroissant (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{t\+NoteF}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{char}]{mentions}{\mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Affiche les notes des étudiants par ordre décroissant. 
+
+Cette fonction affiche les notes des étudiants triées par ordre décroissant, en utilisant les tableaux d\textquotesingle{}étudiants, de stages et de notes finales fournis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em mentions} & Tableau des mentions des étudiants.\\
+\hline
+\end{DoxyParams}
+Cette fonction trie les étudiants par leur note finale (de la plus élevée à la plus basse) et affiche la liste triée. Les étudiants avec la mention "{}\+Stage en cours"{} sont affichés à la fin de la liste.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des références des stages des étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants dans le tableau. \\
+\hline
+{\em mentions} & Tableau des mentions des étudiants (notamment "{}\+Stage en cours"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a37c403718065b466ada892c873f9ed78}\index{SAE.h@{SAE.h}!afficherStages@{afficherStages}}
+\index{afficherStages@{afficherStages}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherStages()}{afficherStages()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a37c403718065b466ada892c873f9ed78} 
+void afficher\+Stages (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+Stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les stages. 
+
+Cette fonction affiche les informations sur les stages, y compris les références, les départements, et l\textquotesingle{}état de pourvu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+Stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Affiche les stages.
+
+Cette fonction affiche les détails des stages disponibles, y compris leur référence, département, état de pourvoi et nombre de candidatures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références de stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si le stage est pourvu (1) ou non (0). \\
+\hline
+{\em t\+Cand} & Tableau des candidatures pour chaque stage. \\
+\hline
+{\em nb\+Stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_adf352f0a6445534b1440e09f9e841766}\index{SAE.h@{SAE.h}!afficherStagesDisponibles@{afficherStagesDisponibles}}
+\index{afficherStagesDisponibles@{afficherStagesDisponibles}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherStagesDisponibles()}{afficherStagesDisponibles()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_adf352f0a6445534b1440e09f9e841766} 
+void afficher\+Stages\+Disponibles (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les stages disponibles. 
+
+Cette fonction affiche la liste des stages disponibles (non pourvus).
+
+Affiche les stages disponibles.
+
+Lit les données des stages depuis le fichier "{}offre\+\_\+stage.\+txt"{} et affiche les stages qui ne sont pas encore pourvus. \Hypertarget{_s_a_e_8h_a8d91efb87d9be63d54353f198a065399}\index{SAE.h@{SAE.h}!afficherStagesNonPourvus@{afficherStagesNonPourvus}}
+\index{afficherStagesNonPourvus@{afficherStagesNonPourvus}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherStagesNonPourvus()}{afficherStagesNonPourvus()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a8d91efb87d9be63d54353f198a065399} 
+void afficher\+Stages\+Non\+Pourvus (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les stages non pourvus. 
+
+Cette fonction affiche les stages qui ne sont pas encore pourvus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Cette fonction affiche les stages qui n\textquotesingle{}ont pas encore été pourvus, en indiquant leur référence et leur département.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu (1) ou non (0). \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a55eab5866c4a24dde3800328fb44e5ff}\index{SAE.h@{SAE.h}!afficherStagesNonPourvusResp@{afficherStagesNonPourvusResp}}
+\index{afficherStagesNonPourvusResp@{afficherStagesNonPourvusResp}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherStagesNonPourvusResp()}{afficherStagesNonPourvusResp()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a55eab5866c4a24dde3800328fb44e5ff} 
+void afficher\+Stages\+Non\+Pourvus\+Resp (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les stages non pourvus pour un responsable. 
+
+Cette fonction affiche les stages non pourvus spécifiquement pour un responsable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Cette fonction affiche les stages non pourvus, avec leur référence et département.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a9a04c2aa7fe93369d0b35f4c1f5ef5f3}\index{SAE.h@{SAE.h}!afficherStagesParDepartement@{afficherStagesParDepartement}}
+\index{afficherStagesParDepartement@{afficherStagesParDepartement}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherStagesParDepartement()}{afficherStagesParDepartement()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a9a04c2aa7fe93369d0b35f4c1f5ef5f3} 
+void afficher\+Stages\+Par\+Departement (\begin{DoxyParamCaption}\item[{int}]{num\+Dept}{, }\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les stages d\textquotesingle{}un département spécifique. 
+
+Cette fonction affiche les stages disponibles dans un département donné.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Dept} & Numéro du département. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Affiche les stages d\textquotesingle{}un département spécifique.
+
+Cette fonction affiche les stages d\textquotesingle{}un département spécifique, en indiquant si ces stages sont pourvus ou non.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Dept} & Numéro du département. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a7a0d64f1d1af4183d0d36c8d25b55553}\index{SAE.h@{SAE.h}!afficherStagesPourvus@{afficherStagesPourvus}}
+\index{afficherStagesPourvus@{afficherStagesPourvus}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{afficherStagesPourvus()}{afficherStagesPourvus()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a7a0d64f1d1af4183d0d36c8d25b55553} 
+void afficher\+Stages\+Pourvus (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{, }\item[{int}]{nb\+\_\+etudiants}{}\end{DoxyParamCaption})}
+
+
+
+Affiche les stages pourvus. 
+
+Cette fonction affiche les stages pourvus et les étudiants qui y sont affectés.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants.\\
+\hline
+\end{DoxyParams}
+Affiche les stages pourvus.
+
+Cette fonction affiche les stages qui ont été pourvus, en indiquant la référence du stage, le département et l\textquotesingle{}étudiant affecté.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Etu} & Tableau des numéros des étudiants affectés. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre total d\textquotesingle{}étudiants. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_ab3155f96ef4d3eec7961d926510e5644}\index{SAE.h@{SAE.h}!ajouter\_etudiant@{ajouter\_etudiant}}
+\index{ajouter\_etudiant@{ajouter\_etudiant}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{ajouter\_etudiant()}{ajouter\_etudiant()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_ab3155f96ef4d3eec7961d926510e5644} 
+int ajouter\+\_\+etudiant (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{t\+NoteF}{\mbox{[}$\,$\mbox{]}, }\item[{int \texorpdfstring{$\ast$}{*}}]{nb\+\_\+etudiants}{, }\item[{int}]{tmax}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute un étudiant dans les tableaux correspondants. 
+
+Cette fonction permet d\textquotesingle{}ajouter un étudiant avec ses informations dans les tableaux d\textquotesingle{}étudiants, de stages, et de notes finales.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Pointeur vers le nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si l\textquotesingle{}étudiant a été ajouté avec succès, 0 sinon.
+\end{DoxyReturn}
+Ajoute un étudiant dans les tableaux correspondants.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des références de stage attribuées aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Pointeur vers le nombre d\textquotesingle{}étudiants dans le tableau. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si succès, -\/1 si la capacité maximale est atteinte, -\/2 si le fichier ne peut pas être ouvert. 
+\end{DoxyReturn}
+\Hypertarget{_s_a_e_8h_aea49aa9dd3e307fce1a0c6e86a9529c0}\index{SAE.h@{SAE.h}!ajouter\_stage@{ajouter\_stage}}
+\index{ajouter\_stage@{ajouter\_stage}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{ajouter\_stage()}{ajouter\_stage()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_aea49aa9dd3e307fce1a0c6e86a9529c0} 
+int ajouter\+\_\+stage (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand}{\mbox{[}$\,$\mbox{]}, }\item[{int \texorpdfstring{$\ast$}{*}}]{nb\+Stages}{, }\item[{int}]{tmax}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute un stage dans les tableaux correspondants. 
+
+Cette fonction permet d\textquotesingle{}ajouter une offre de stage dans les tableaux des références, départements, et candidatures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+Stages} & Pointeur vers le nombre de stages. \\
+\hline
+{\em tmax} & Taille maximale des tableaux.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si le stage a été ajouté avec succès, 0 sinon.
+\end{DoxyReturn}
+Ajoute un stage dans les tableaux correspondants.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références de stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si le stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau du nombre de candidatures par stage. \\
+\hline
+{\em nb\+Stages} & Pointeur vers le nombre de stages dans le tableau. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si succès, -\/1 si la capacité maximale est atteinte, -\/2 si le fichier ne peut pas être ouvert. 
+\end{DoxyReturn}
+\Hypertarget{_s_a_e_8h_af4c2c9cd54078ae9b892b4a906aa14ea}\index{SAE.h@{SAE.h}!attribuerNotes@{attribuerNotes}}
+\index{attribuerNotes@{attribuerNotes}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{attribuerNotes()}{attribuerNotes()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_af4c2c9cd54078ae9b892b4a906aa14ea} 
+void attribuer\+Notes (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{char}]{mentions}{\mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]}, }\item[{int}]{tmax}{}\end{DoxyParamCaption})}
+
+
+
+Attribue des mentions aux étudiants en fonction de leurs notes. 
+
+Cette fonction attribue une mention aux étudiants en fonction de leurs notes dans les tableaux fournis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em mentions} & Tableau des mentions des étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux.\\
+\hline
+\end{DoxyParams}
+Attribue des mentions aux étudiants en fonction de leurs notes.
+
+Cette fonction permet d\textquotesingle{}attribuer des notes à un étudiant pour son stage, en prenant en compte les notes de l\textquotesingle{}entreprise, du rapport et de la soutenance. Elle calcule ensuite la note finale en appliquant les coefficients définis. Le fichier des étudiants est mis à jour avec les nouvelles notes et les mentions (si applicable).
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des références des stages attribués aux étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants dans le tableau. \\
+\hline
+{\em mentions} & Tableau des mentions des étudiants (indiquant "{}\+Stage en cours"{} si le stage n\textquotesingle{}est pas terminé). \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a4f547d880100208465c1732fb2a6af0b}\index{SAE.h@{SAE.h}!candidater@{candidater}}
+\index{candidater@{candidater}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{candidater()}{candidater()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a4f547d880100208465c1732fb2a6af0b} 
+int candidater (\begin{DoxyParamCaption}\item[{int}]{etu\+Num}{, }\item[{int}]{ref\+Stage}{, }\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand\+Etu}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+Stages}{}\end{DoxyParamCaption})}
+
+
+
+Permet à un étudiant de candidater à un stage. 
+
+Cette fonction permet à un étudiant de candidater à un stage donné en fonction de son numéro et de la référence du stage. Elle met à jour les candidatures et les informations liées aux stages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em etu\+Num} & Numéro de l\textquotesingle{}étudiant. \\
+\hline
+{\em ref\+Stage} & Référence du stage auquel candidater. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em nb\+Stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si la candidature a été enregistrée avec succès, 0 sinon.
+\end{DoxyReturn}
+Cette fonction vérifie plusieurs conditions avant d\textquotesingle{}ajouter un étudiant à la liste des candidats pour un stage \+:
+\begin{DoxyItemize}
+\item Le stage est-\/il déjà pourvu ?
+\item L\textquotesingle{}étudiant a-\/t-\/il déjà atteint la limite de candidatures ?
+\item Le stage a-\/t-\/il atteint le nombre maximal de candidatures ?
+\item L\textquotesingle{}étudiant a-\/t-\/il déjà candidaté pour ce stage ?
+\end{DoxyItemize}
+
+Si toutes les conditions sont remplies, l\textquotesingle{}étudiant est ajouté à la liste des candidatures pour ce stage. Le fichier des stages est ensuite réécrit pour refléter la nouvelle candidature.
+
+
+\begin{DoxyParams}{Parameters}
+{\em etu\+Num} & Le numéro de l\textquotesingle{}étudiant. \\
+\hline
+{\em ref\+Stage} & La référence du stage auquel l\textquotesingle{}étudiant veut candidater. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Cand} & Tableau du nombre de candidatures par stage. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si le stage est pourvu (1 pour pourvu, 0 pour non). \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des étudiants ayant candidaté à chaque stage. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em nb\+Stages} & Nombre total de stages disponibles.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne -\/1 en cas de succès ou un code d\textquotesingle{}erreur si une condition échoue \+: -\/7 si le stage est déjà pourvu, -\/6 si l\textquotesingle{}étudiant a déjà atteint la limite de candidatures, -\/2 si le stage est déjà complet, -\/3 si l\textquotesingle{}étudiant a déjà candidaté pour ce stage, -\/1 si le stage est introuvable, -\/4 en cas d\textquotesingle{}erreur d\textquotesingle{}ouverture du fichier des stages. 
+\end{DoxyReturn}
+\Hypertarget{_s_a_e_8h_ae72bba9e683d31179b4d5d8c31873875}\index{SAE.h@{SAE.h}!fChargementEtu@{fChargementEtu}}
+\index{fChargementEtu@{fChargementEtu}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{fChargementEtu()}{fChargementEtu()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_ae72bba9e683d31179b4d5d8c31873875} 
+int f\+Chargement\+Etu (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{t\+NoteF}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{tmax}{}\end{DoxyParamCaption})}
+
+
+
+Charge les informations des étudiants depuis un fichier. 
+
+Cette fonction charge les données des étudiants, y compris les numéros d\textquotesingle{}étudiant, les stages attribués, et les notes finales, dans les tableaux fournis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre d\textquotesingle{}étudiants chargés.
+\end{DoxyReturn}
+Charge les informations des étudiants depuis un fichier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des références de stage attribuées aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre d\textquotesingle{}étudiants chargés, -\/1 si le fichier est introuvable, -\/2 si la capacité maximale est atteinte. 
+\end{DoxyReturn}
+\Hypertarget{_s_a_e_8h_acdc814befe1eeecca53f3727632644fa}\index{SAE.h@{SAE.h}!fChargementStage@{fChargementStage}}
+\index{fChargementStage@{fChargementStage}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{fChargementStage()}{fChargementStage()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_acdc814befe1eeecca53f3727632644fa} 
+int f\+Chargement\+Stage (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand\+Etu}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{int}]{tmax}{}\end{DoxyParamCaption})}
+
+
+
+Charge les informations des stages depuis un fichier. 
+
+Cette fonction charge les données des stages, y compris les références de stage, les départements, les états de pourvu, les candidatures des étudiants, dans les tableaux fournis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre de stages chargés.
+\end{DoxyReturn}
+Charge les informations des stages depuis un fichier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références de stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si le stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau du nombre de candidatures par stage. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau 2D des candidats pour chaque stage. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre de stages chargés, -\/1 si le fichier est introuvable, -\/2 si la capacité maximale est atteinte. 
+\end{DoxyReturn}
+\Hypertarget{_s_a_e_8h_a5c23c0a1b61108fd4b966d7a05007134}\index{SAE.h@{SAE.h}!fRechercher@{fRechercher}}
+\index{fRechercher@{fRechercher}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{fRechercher()}{fRechercher()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a5c23c0a1b61108fd4b966d7a05007134} 
+int f\+Rechercher (\begin{DoxyParamCaption}\item[{int}]{numero}{, }\item[{int}]{tableau}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{taille}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{trouve}{}\end{DoxyParamCaption})}
+
+
+
+Recherche un élément dans un tableau. 
+
+Cette fonction recherche un élément donné dans un tableau. Elle met à jour une variable de résultat indiquant si l\textquotesingle{}élément a été trouvé.
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & L\textquotesingle{}élément à rechercher. \\
+\hline
+{\em tableau} & Le tableau dans lequel rechercher. \\
+\hline
+{\em taille} & Taille du tableau. \\
+\hline
+{\em trouve} & Pointeur vers une variable indiquant si l\textquotesingle{}élément a été trouvé.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si l\textquotesingle{}élément est trouvé, 0 sinon.
+\end{DoxyReturn}
+Recherche un élément dans un tableau.
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & Numéro à rechercher. \\
+\hline
+{\em tableau} & Tableau où effectuer la recherche. \\
+\hline
+{\em taille} & Taille du tableau. \\
+\hline
+{\em trouve} & Pointeur vers une variable indiquant si le numéro a été trouvé (1) ou non (0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index de l\textquotesingle{}élément trouvé, -\/1 si introuvable. 
+\end{DoxyReturn}
+\Hypertarget{_s_a_e_8h_a23e17d21f9a63f2ec72edc228c0041d7}\index{SAE.h@{SAE.h}!menu\_etudiant@{menu\_etudiant}}
+\index{menu\_etudiant@{menu\_etudiant}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{menu\_etudiant()}{menu\_etudiant()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a23e17d21f9a63f2ec72edc228c0041d7} 
+void menu\+\_\+etudiant (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{t\+NoteF}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand\+Etu}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le menu étudiant. 
+
+Ce menu permet à l\textquotesingle{}étudiant de candidater à des stages, de consulter ses candidatures, et d\textquotesingle{}afficher ses notes et informations personnelles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Affiche le menu étudiant.
+
+Cette fonction affiche le menu principal pour un étudiant, lui permettant de consulter les stages disponibles, de candidater pour un stage, etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_ab1f02b4520f65b14764c0a2939070a13}\index{SAE.h@{SAE.h}!menu\_jury@{menu\_jury}}
+\index{menu\_jury@{menu\_jury}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{menu\_jury()}{menu\_jury()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_ab1f02b4520f65b14764c0a2939070a13} 
+void menu\+\_\+jury (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{t\+NoteF}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{int}]{nb\+\_\+stages}{, }\item[{char}]{mentions}{\mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]}, }\item[{int}]{tmax}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le menu du jury. 
+
+Ce menu permet au jury de consulter les étudiants, leurs stages et leurs notes finales.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages. \\
+\hline
+{\em mentions} & Tableau des mentions des étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux.\\
+\hline
+\end{DoxyParams}
+Affiche le menu du jury.
+
+Cette fonction permet au jury de gérer les étudiants, ajouter/supprimer un étudiant, attribuer des notes, afficher les notes, etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre total d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+{\em mentions} & Tableau des mentions des étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_aae025fd63cea62c1a1bdcf7c0e86e58f}\index{SAE.h@{SAE.h}!menu\_principal@{menu\_principal}}
+\index{menu\_principal@{menu\_principal}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{menu\_principal()}{menu\_principal()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_aae025fd63cea62c1a1bdcf7c0e86e58f} 
+void menu\+\_\+principal (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche le menu principal. 
+
+Ce menu permet à l\textquotesingle{}utilisateur de choisir entre le menu jury, étudiant, ou responsable.
+
+Affiche le menu principal.
+
+Ce menu permet à l\textquotesingle{}utilisateur de choisir entre différents sous-\/menus \+: Jury, Étudiant, Responsable des Stages, ou de quitter l\textquotesingle{}application. Il charge également les données depuis les fichiers et initialise les variables nécessaires.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em mentions} & Tableau des mentions des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_ad4af7a281ca0d4f62d59ae21897687f7}\index{SAE.h@{SAE.h}!menu\_responsable@{menu\_responsable}}
+\index{menu\_responsable@{menu\_responsable}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{menu\_responsable()}{menu\_responsable()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_ad4af7a281ca0d4f62d59ae21897687f7} 
+void menu\+\_\+responsable (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand}{\mbox{[}$\,$\mbox{]}, }\item[{int \texorpdfstring{$\ast$}{*}}]{nb\+Stages}{, }\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{int}]{tmax}{, }\item[{int}]{t\+Cand\+Etu}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Affiche le menu du responsable. 
+
+Ce menu permet au responsable de gérer les stages, de consulter les candidatures et de gérer les étudiants.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+Stages} & Pointeur vers le nombre de stages. \\
+\hline
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants.\\
+\hline
+\end{DoxyParams}
+Affiche le menu du responsable.
+
+Ce menu permet au responsable des stages d\textquotesingle{}ajouter ou de supprimer une offre de stage, d\textquotesingle{}affecter un stage à un étudiant, d\textquotesingle{}afficher les stages disponibles, et de consulter ses affichages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+Stages} & Pointeur vers le nombre de stages. \\
+\hline
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em tmax} & Taille maximale des tableaux. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_ae461a30bb03a3a159ccff2fdbfd2d595}\index{SAE.h@{SAE.h}!rechercherStages@{rechercherStages}}
+\index{rechercherStages@{rechercherStages}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{rechercherStages()}{rechercherStages()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_ae461a30bb03a3a159ccff2fdbfd2d595} 
+void rechercher\+Stages (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Permet de rechercher des stages selon un critère. 
+
+Cette fonction permet de rechercher des stages en fonction de différents critères, tels que la référence, le département, et l\textquotesingle{}état de pourvu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Permet de rechercher des stages selon un critère.
+
+Cette fonction permet de rechercher un stage par son numéro ou son département et affiche les résultats.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a33ed0acffddacb3069a6c30e9563d2cc}\index{SAE.h@{SAE.h}!sauvegarder\_etudiants@{sauvegarder\_etudiants}}
+\index{sauvegarder\_etudiants@{sauvegarder\_etudiants}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarder\_etudiants()}{sauvegarder\_etudiants()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a33ed0acffddacb3069a6c30e9563d2cc} 
+void sauvegarder\+\_\+etudiants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_etudiant}{Etudiant}}}]{etudiants}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{}\end{DoxyParamCaption})}
+
+
+
+Sauvegarde les informations des étudiants dans un fichier. 
+
+Cette fonction sauvegarde les informations des étudiants dans un fichier, y compris leur numéro, leur stage, et leur note finale.
+
+
+\begin{DoxyParams}{Parameters}
+{\em etudiants} & Tableau des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants.\\
+\hline
+\end{DoxyParams}
+Sauvegarde les informations des étudiants dans un fichier.
+
+Cette fonction sauvegarde les informations des étudiants (numéro, stage attribué, note finale) dans un fichier texte.
+
+
+\begin{DoxyParams}{Parameters}
+{\em etudiants} & Tableau des structures représentant les étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre total d\textquotesingle{}étudiants. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a94fade4d608a10fb3eef0a39debaa9c6}\index{SAE.h@{SAE.h}!sauvegarder\_stages@{sauvegarder\_stages}}
+\index{sauvegarder\_stages@{sauvegarder\_stages}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{sauvegarder\_stages()}{sauvegarder\_stages()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a94fade4d608a10fb3eef0a39debaa9c6} 
+void sauvegarder\+\_\+stages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stage}{Stage}}}]{stages}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Sauvegarde les informations des stages dans un fichier. 
+
+Cette fonction sauvegarde les informations des stages dans un fichier, y compris la référence, le département, et l\textquotesingle{}état de pourvu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stages} & Tableau des stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Sauvegarde les informations des stages dans un fichier.
+
+Cette fonction sauvegarde les informations des stages (référence, département, état de pourvoi, nombre de candidatures) dans un fichier texte.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stages} & Tableau des structures représentant les stages. \\
+\hline
+{\em nb\+\_\+stages} & Nombre total de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a03ee8f45157dceb26b56276c226e552a}\index{SAE.h@{SAE.h}!suite\_etudiant@{suite\_etudiant}}
+\index{suite\_etudiant@{suite\_etudiant}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{suite\_etudiant()}{suite\_etudiant()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a03ee8f45157dceb26b56276c226e552a} 
+void suite\+\_\+etudiant (\begin{DoxyParamCaption}\item[{int}]{numero}{, }\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand\+Etu}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Permet à l\textquotesingle{}étudiant de gérer ses candidatures. 
+
+Cette fonction permet à l\textquotesingle{}étudiant de consulter ses candidatures et d\textquotesingle{}effectuer des actions en conséquence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & Numéro de l\textquotesingle{}étudiant. \\
+\hline
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Permet à l\textquotesingle{}étudiant de gérer ses candidatures.
+
+Cette fonction affiche le menu pour un étudiant spécifique, permettant de consulter ses candidatures et de gérer ses choix de stage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em numero} & Numéro de l\textquotesingle{}étudiant. \\
+\hline
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_ae3337d213d948f3afe316254999df975}\index{SAE.h@{SAE.h}!suite\_responsable@{suite\_responsable}}
+\index{suite\_responsable@{suite\_responsable}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{suite\_responsable()}{suite\_responsable()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_ae3337d213d948f3afe316254999df975} 
+void suite\+\_\+responsable (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand\+Etu}{\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }\item[{int}]{nb\+\_\+etudiants}{, }\item[{int}]{nb\+\_\+stages}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la suite du menu responsable. 
+
+Cette fonction permet au responsable de consulter les informations sur les stages, les étudiants et les candidatures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau des états de pourvu des stages. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages.\\
+\hline
+\end{DoxyParams}
+Affiche la suite du menu responsable.
+
+Ce menu permet au responsable des stages d\textquotesingle{}effectuer diverses actions telles que l\textquotesingle{}affichage des stages pourvus, non pourvus, des étudiants sans stage, des informations sur un stage spécifique, et une recherche de stage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros des étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand\+Etu} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+\_\+etudiants} & Nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em nb\+\_\+stages} & Nombre de stages. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_s_a_e_8h_a13003bc69e9fa64827a3127b69fb98cd}\index{SAE.h@{SAE.h}!supprimer\_stage@{supprimer\_stage}}
+\index{supprimer\_stage@{supprimer\_stage}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{supprimer\_stage()}{supprimer\_stage()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a13003bc69e9fa64827a3127b69fb98cd} 
+int supprimer\+\_\+stage (\begin{DoxyParamCaption}\item[{int}]{t\+Ref}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Dept}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Pourvu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Cand}{\mbox{[}$\,$\mbox{]}, }\item[{int \texorpdfstring{$\ast$}{*}}]{nb\+Stages}{, }\item[{int}]{ref\+Stage}{}\end{DoxyParamCaption})}
+
+
+
+Supprime un stage des tableaux correspondants. 
+
+Cette fonction permet de supprimer une offre de stage en fonction de sa référence et de mettre à jour les tableaux des références, départements, et candidatures.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références des stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si un stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau des candidatures des étudiants. \\
+\hline
+{\em nb\+Stages} & Pointeur vers le nombre de stages. \\
+\hline
+{\em ref\+Stage} & Référence du stage à supprimer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si le stage a été supprimé avec succès, 0 sinon.
+\end{DoxyReturn}
+Supprime un stage des tableaux correspondants.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Ref} & Tableau des références de stages. \\
+\hline
+{\em t\+Dept} & Tableau des départements des stages. \\
+\hline
+{\em t\+Pourvu} & Tableau indiquant si le stage est pourvu. \\
+\hline
+{\em t\+Cand} & Tableau du nombre de candidatures par stage. \\
+\hline
+{\em nb\+Stages} & Pointeur vers le nombre de stages dans le tableau. \\
+\hline
+{\em ref\+Stage} & Référence du stage à supprimer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si succès, -\/1 si le stage est introuvable, -\/2 si le fichier ne peut pas être ouvert. 
+\end{DoxyReturn}
+\Hypertarget{_s_a_e_8h_a8200f043d539773e5fa9d30a45919e87}\index{SAE.h@{SAE.h}!supprimerEtu@{supprimerEtu}}
+\index{supprimerEtu@{supprimerEtu}!SAE.h@{SAE.h}}
+\doxysubsubsection{\texorpdfstring{supprimerEtu()}{supprimerEtu()}}
+{\footnotesize\ttfamily \label{_s_a_e_8h_a8200f043d539773e5fa9d30a45919e87} 
+int supprimer\+Etu (\begin{DoxyParamCaption}\item[{int}]{t\+Etu}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{t\+Stage}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{t\+NoteF}{\mbox{[}$\,$\mbox{]}, }\item[{int \texorpdfstring{$\ast$}{*}}]{nb\+Etu}{, }\item[{int}]{num}{}\end{DoxyParamCaption})}
+
+
+
+Supprime un étudiant des tableaux correspondants. 
+
+Cette fonction permet de supprimer un étudiant en fonction de son numéro et de mettre à jour les tableaux d\textquotesingle{}étudiants, de stages et de notes finales.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des stages attribués aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+Etu} & Pointeur vers le nombre d\textquotesingle{}étudiants. \\
+\hline
+{\em num} & Numéro de l\textquotesingle{}étudiant à supprimer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si l\textquotesingle{}étudiant a été supprimé avec succès, 0 sinon.
+\end{DoxyReturn}
+Supprime un étudiant des tableaux correspondants.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+Etu} & Tableau des numéros d\textquotesingle{}étudiants. \\
+\hline
+{\em t\+Stage} & Tableau des références de stage attribuées aux étudiants. \\
+\hline
+{\em t\+NoteF} & Tableau des notes finales des étudiants. \\
+\hline
+{\em nb\+Etu} & Pointeur vers le nombre d\textquotesingle{}étudiants dans le tableau. \\
+\hline
+{\em num} & Numéro de l\textquotesingle{}étudiant à supprimer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 si succès, -\/1 si l\textquotesingle{}étudiant est introuvable, -\/2 si le fichier ne peut pas être ouvert. 
+\end{DoxyReturn}
