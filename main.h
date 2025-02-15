@@ -48,7 +48,7 @@ int fChargementStage(int tRef[], int tDept[], int tPourvu[], int tCand[], int tC
  * @param mentions Tableau des mentions des étudiants.
  * @param tmax Taille maximale des tableaux.
  */
-void attribuerNotes(int tEtu[], int tStage[], int nb_etudiants, char mentions[][20], int tmax);
+void attribuerNotes(int tEtu[], int tStage[], int *nb_etudiants, char mentions[][20], int tmax);
 
 /**
  * @brief Affiche les notes des étudiants par ordre décroissant.
@@ -62,7 +62,7 @@ void attribuerNotes(int tEtu[], int tStage[], int nb_etudiants, char mentions[][
  * @param nb_etudiants Nombre d'étudiants.
  * @param mentions Tableau des mentions des étudiants.
  */
-void afficherNotesParOrdreDecroissant(int tEtu[], int tStage[], float tNoteF[], int nb_etudiants, char mentions[][20]);
+void afficherNotesParOrdreDecroissant(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants, char mentions[][20]);
 
 
 
@@ -96,7 +96,7 @@ int ajouter_etudiant(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants
  * 
  * @return 1 si l'étudiant a été supprimé avec succès, 0 sinon.
  */
-int supprimerEtu(int tEtu[], int tStage[], float tNoteF[], int *nbEtu, int num);
+int supprimerEtu(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants, int num);
 
 /**
  * @brief Ajoute un stage dans les tableaux correspondants.
@@ -211,7 +211,7 @@ void rechercherStages(int tRef[], int tDept[], int tPourvu[], int nb_stages);
  * @param nbEtu Nombre d'étudiants.
  * @param num Numéro de l'étudiant à afficher.
  */
-void afficherEleves(int tEtu[], int tStage[], float tNoteF[], int nbEtu, int num);
+void afficherEleves(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants, int num);
 
 /**
  * @brief Affiche les candidatures d'un étudiant.
@@ -333,7 +333,7 @@ void afficherInfoStage(int tRef[], int tDept[], int tPourvu[], int nb_stages);
  * @param etudiants Tableau des étudiants.
  * @param nb_etudiants Nombre d'étudiants.
  */
-void sauvegarder_etudiants(int tEtu[], int tStage[], float tNoteF[], int nbEtu);
+void sauvegarder_etudiants(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants);
 
 /**
  * @brief Sauvegarde les informations des stages dans un fichier.
@@ -362,7 +362,7 @@ void sauvegarder_stages(int tRef[], int tDept[], int tPourvu[], int tCand[], int
  * @param mentions Tableau des mentions des étudiants.
  * @param tmax Taille maximale des tableaux.
  */
-void menu_jury(int tEtu[], int tStage[], float tNoteF[], int tRef[], int nb_etudiants, int nb_stages, char mentions[][20], int tmax);
+void menu_jury(int tEtu[], int tStage[], float tNoteF[], int tRef[], int *nb_etudiants, int nb_stages, char mentions[][20], int tmax);
 
 /**
  * @brief Affiche le menu étudiant.

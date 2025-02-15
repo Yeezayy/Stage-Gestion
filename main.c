@@ -89,21 +89,21 @@ int fChargementStage(int tRef[], int tDept[], int tPourvu[],int tCand[], int tCa
  * @param num Numéro de l'étudiant à supprimer.
  * @return 0 si succès, -1 si l'étudiant est introuvable, -2 si le fichier ne peut pas être ouvert.
  */
-int supprimerEtu(int tEtu[], int tStage[], float tNoteF[], int *nbEtu, int num) {
+int supprimerEtu(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants, int num) {
     int trouve = 0;
 
     // Recherche de l'étudiant
-    for (int i = 0; i < *nbEtu; i++) {
+    for (int i = 0; i < *nb_etudiants; i++) {
         if (tEtu[i] == num) {
             trouve = 1;
 
             // Décalage des éléments restants
-            for (int j = i; j < *nbEtu - 1; j++) {
+            for (int j = i; j < *nb_etudiants - 1; j++) {
                 tEtu[j] = tEtu[j + 1];
                 tStage[j] = tStage[j + 1];
                 tNoteF[j] = tNoteF[j + 1];
             }
-            (*nbEtu)--;
+            (*nb_etudiants)--;
             break;
         }
     }
@@ -119,7 +119,7 @@ int supprimerEtu(int tEtu[], int tStage[], float tNoteF[], int *nbEtu, int num) 
         printf("Erreur : Impossible d'ouvrir le fichier 'fiche_etu.txt' pour la réécriture.\n");
         return -2;
     }
-    for (int i = 0; i < *nbEtu; i++) {
+    for (int i = 0; i < *nb_etudiants; i++) {
         fprintf(etudiants, "%d\t%d\t%f\n", tEtu[i], tStage[i], tNoteF[i]);
     }
     fclose(etudiants);
@@ -183,7 +183,7 @@ int ajouter_etudiant(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants
         printf("Erreur : Impossible d'ouvrir le fichier 'fiche_etu.txt' pour l'écriture.\n");
         return -2;
     }
-    fprintf(etudiants, "%d\t%d\t%d\n", numero, -1, -1);
+    fprintf(etudiants, "\n%d\t%d\t%d", numero, -1, -1);
     fclose(etudiants);
 
     printf("L'étudiant %d a été ajouté avec succès et enregistré dans le fichier.\n", numero);
@@ -468,7 +468,7 @@ int candidater(int etuNum, int refStage, int tRef[], int tCand[], int tPourvu[],
  * @param mentions Tableau des mentions des étudiants (indiquant "Stage en cours" si le stage n'est pas terminé).
  * @param tmax Taille maximale des tableaux.
  */
-void attribuerNotes(int tEtu[], int tStage[], int nb_etudiants, char mentions[][20], int tmax) {
+void attribuerNotes(int tEtu[], int tStage[], int *nb_etudiants, char mentions[][20], int tmax) {
     float notesEntreprise[100], notesRapport[100], notesSoutenance[100], notesFinales[100];
 
     // Fichier ouvert en mode lecture pour charger les données
@@ -504,7 +504,7 @@ void attribuerNotes(int tEtu[], int tStage[], int nb_etudiants, char mentions[][
     scanf("%d", &numero);
 
     // Recherche de l'étudiant dans le tableau
-    int index = fRechercher(numero, tEtu, nb_etudiants, &trouve);
+    int index = fRechercher(numero, tEtu, *nb_etudiants, &trouve);
     if (!trouve) {
         printf("L'étudiant avec le numéro %d n'a pas été trouvé.\n", numero);
         return;
@@ -572,10 +572,10 @@ void attribuerNotes(int tEtu[], int tStage[], int nb_etudiants, char mentions[][
  * @param nb_etudiants Nombre d'étudiants dans le tableau.
  * @param mentions Tableau des mentions des étudiants (notamment "Stage en cours").
  */
-void afficherNotesParOrdreDecroissant(int tEtu[], int tStage[], float tNoteF[], int nb_etudiants, char mentions[][20]) {
+void afficherNotesParOrdreDecroissant(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants, char mentions[][20]) {
     // Tri des étudiants par leur note finale (ordre décroissant), en plaçant les mentions "Stage en cours" à la fin
-    for (int i = 0; i < nb_etudiants - 1; i++) {
-        for (int j = i + 1; j < nb_etudiants; j++) {
+    for (int i = 0; i < *nb_etudiants - 1; i++) {
+        for (int j = i + 1; j < *nb_etudiants; j++) {
             int mentionIEnCours = (mentions[i][0] == 'S'); // Vérifie si mention[i] commence par "Stage"
             int mentionJEnCours = (mentions[j][0] == 'S'); // Vérifie si mention[j] commence par "Stage"
 
@@ -615,7 +615,7 @@ void afficherNotesParOrdreDecroissant(int tEtu[], int tStage[], float tNoteF[], 
     printf("Numéro\tNote Finale\n");
 
     // Afficher les étudiants ayant une note finale valide (non "Stage en cours")
-    for (int i = 0; i < nb_etudiants; i++) {
+    for (int i = 0; i < *nb_etudiants; i++) {
         if (mentions[i][0] != 'S') { // Vérifie si mention[i] n'est pas "Stage en cours"
             printf("%d\t%.2f\n", tEtu[i], tNoteF[i]);
         }
@@ -623,7 +623,7 @@ void afficherNotesParOrdreDecroissant(int tEtu[], int tStage[], float tNoteF[], 
 
     // Afficher les étudiants avec "Stage en cours" à la fin
     printf("\n=== Étudiants en stage (Stage en cours) ===\n");
-    for (int i = 0; i < nb_etudiants; i++) {
+    for (int i = 0; i < *nb_etudiants; i++) {
         if (mentions[i][0] == 'S') { // Vérifie si mention[i] est "Stage en cours"
             printf("%d\t%d\tStage en cours\n", tEtu[i], tStage[i]);
         }
@@ -806,7 +806,7 @@ void afficherStages(int tRef[], int tDept[], int tPourvu[],int tCand[], int nbSt
  * @param nbEtu Nombre d'étudiants.
  * @param num Numéro de l'étudiant à rechercher. Si égal à -1, affiche tous les étudiants.
  */
-void afficherEleves(int tEtu[], int tStage[], float tNoteF[], int nbEtu, int num) {
+void afficherEleves(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants, int num) {
     int trouve = 0;
 
     printf("=== Affichage des étudiants ===\n");
@@ -814,11 +814,11 @@ void afficherEleves(int tEtu[], int tStage[], float tNoteF[], int nbEtu, int num
     if (num == -1) {
         printf("Liste de tous les étudiants :\n");
         printf("Numéro\tStage\tNote Finale\n");
-        for (int i = 0; i < nbEtu; i++) {
+        for (int i = 0; i < *nb_etudiants; i++) {
             printf("%d\t%d\t%f\n", tEtu[i], tStage[i], tNoteF[i]);
         }
     } else {
-        for (int i = 0; i < nbEtu; i++) {
+        for (int i = 0; i < *nb_etudiants; i++) {
             if (tEtu[i] == num) {
                 printf("Étudiant trouvé :\n");
                 printf("Numéro : %d\n", tEtu[i]);
@@ -1074,15 +1074,17 @@ void rechercherStages(int tRef[], int tDept[], int tPourvu[],int nb_stages) {
  * @param etudiants Tableau des structures représentant les étudiants.
  * @param nb_etudiants Nombre total d'étudiants.
  */
-void sauvegarder_etudiants(int tEtu[], int tStage[], float tNoteF[], int nbEtu) {
+void sauvegarder_etudiants(int tEtu[], int tStage[], float tNoteF[], int *nb_etudiants) {
     FILE *fichier = fopen("fiche_etu.txt", "w");
     if (fichier == NULL) {
         printf("Erreur : Impossible d'ouvrir le fichier 'fiche_etu.txt'.\n");
         return;
     }
 
-    for (int i = 0; i < nbEtu; i++) {
-        fprintf(fichier, "%d %d %.2f\n", tEtu[i], tStage[i], tNoteF[i]);
+    for (int i = 0; i < *nb_etudiants; i++) {
+        fprintf(fichier, "\n%d" , tEtu[i]);
+        fprintf(fichier, "%d", tStage[i]);
+        fprintf(fichier, "%.2f", tNoteF[i]);
     }
 
     fclose(fichier);
@@ -1139,7 +1141,7 @@ void sauvegarder_stages(int tRef[], int tDept[], int tPourvu[], int tCand[], int
  * @param mentions Tableau des mentions des étudiants.
  * @param tmax Taille maximale des tableaux.
  */
-void menu_jury(int tEtu[], int tStage[], float tNoteF[], int tRef[], int nb_etudiants, int nb_stages, char mentions[][20], int tmax) {
+void menu_jury(int tEtu[], int tStage[], float tNoteF[], int tRef[], int *nb_etudiants, int nb_stages, char mentions[][20], int tmax) {
     int choix;
 
     do {
@@ -1155,7 +1157,7 @@ void menu_jury(int tEtu[], int tStage[], float tNoteF[], int tRef[], int nb_etud
 
         switch (choix) {
             case 1:
-                ajouter_etudiant(tEtu, tStage, tNoteF, &nb_etudiants, tmax);
+                ajouter_etudiant(tEtu, tStage, tNoteF, nb_etudiants, tmax);
                 break;
 
             case 2: {
@@ -1163,7 +1165,7 @@ void menu_jury(int tEtu[], int tStage[], float tNoteF[], int tRef[], int nb_etud
                     int numero;
                     printf("Entrez le numéro de l'étudiant à supprimer : ");
                     scanf("%d", &numero);
-                    supprimerEtu(tEtu, tStage, tNoteF, &nb_etudiants, numero);
+                    supprimerEtu(tEtu, tStage, tNoteF, nb_etudiants, numero);
                 } else {
                     printf("Aucun étudiant à supprimer.\n");
                 }
@@ -1551,12 +1553,14 @@ void menu_responsable(int tRef[], int tDept[], int tPourvu[], int tCand[], int *
  */
 void menu_principal() {
     int choix;
-    int nb_etudiants = 0, nb_stages = 0, tmax = 100;
+    int tmax = 100;
+    int nb_etudiants, nb_stages;
     int tEtu[100], tStage[100];
     float tNoteF[100];
     int tRef[100], tDept[100], tPourvu[100], tCand[100];
     int tCandEtu[100][3];
     char mentions[100][20];
+
 
     // Charger les données depuis les fichiers
     nb_etudiants = fChargementEtu(tEtu, tStage, tNoteF, tmax);
@@ -1571,6 +1575,7 @@ void menu_principal() {
             tCandEtu[i][j] = -1;
         }
     }
+    printf("nb d'élève chargé %d", nb_etudiants);
 
     do {
         printf("\n===== MENU PRINCIPAL =====\n");
@@ -1583,7 +1588,7 @@ void menu_principal() {
 
         switch (choix) {
             case 1:
-                menu_jury(tEtu, tStage, tNoteF, tRef, nb_etudiants, nb_stages, mentions, tmax);
+                menu_jury(tEtu, tStage, tNoteF, tRef, &nb_etudiants, nb_stages, mentions, tmax);
                 break;
 
             case 2:
@@ -1591,11 +1596,11 @@ void menu_principal() {
                 break;
 
             case 3:
-                menu_responsable(tRef, tDept, tPourvu, tCand, &nb_stages, tEtu, tStage, nb_etudiants, tmax, tCandEtu);
+                printf("nb d'élève chargé %d", nb_etudiants);
                 break;
 
             case 4: 
-                sauvegarder_etudiants(tEtu,tStage,tNoteF,nb_etudiants);
+                sauvegarder_etudiants(tEtu,tStage,tNoteF,&nb_etudiants);
                 sauvegarder_stages(tRef,tDept,tPourvu,tCand,tCandEtu,nb_stages);
                 printf("Au revoir !\n");
                 break;
@@ -1605,4 +1610,9 @@ void menu_principal() {
                 break;
         }
     } while (choix != 4);
+}
+
+int main(void) {
+    menu_principal();
+    return 0;
 }
